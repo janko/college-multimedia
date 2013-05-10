@@ -1,0 +1,27 @@
+.image.text-center
+  %p
+    %img{src: "/uploads/#{@processed_image_filename}", class: "img-polaroid"}
+
+  %form{action: "/process", method: "post", class: "form-horizontal"}
+    %input{type: "hidden", name: "_method", value: "put"}
+
+    %ul.inline
+      %li= partial "checkbox", {title: "Grayscale"}
+      %li= partial "checkbox", {title: "Blur"}
+      %li= partial "checkbox", {title: "Blue"}
+      %li= partial "checkbox", {title: "Pixelate"}
+      %li= partial "checkbox", {title: "Binoculars"}
+      %li= partial "checkbox", {title: "Paint"}
+      %li= partial "checkbox", {title: "Stamp"}
+      %li= partial "checkbox", {title: "Circles"}
+      %li= partial "checkbox", {title: "Split"}
+
+    %input{type: "submit", value: "Process", class: "btn btn-primary"}
+
+.image.text-center
+  %p
+    %img{src: "/uploads/#{@image_filename}", class: "img-polaroid", width: 300, height: 200}
+
+  %form{action: "/remove", method: "post"}
+    %input{type: "hidden", name: "_method", value: "delete"}
+    %input{type: "submit", value: "Remove", class: "btn btn-danger"}

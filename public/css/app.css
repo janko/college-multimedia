@@ -1,0 +1,26 @@
+body {
+  font-family: "Book Antiqua";
+}
+
+#title {
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+
+#title h1 {
+  font-size: 60px;
+}
+
+.image {
+  margin-bottom: 60px;
+}
+
+label {
+  font-size: 15px;
+}
+
+.composite-image {
+  position: absolute;
+  top: 230px;
+  right: 30px;
+}
